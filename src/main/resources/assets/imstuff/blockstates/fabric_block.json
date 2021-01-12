@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "imstuff:block/fabric_block"
+        }
+    }
+}
