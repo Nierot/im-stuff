@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab_top",
+    "textures": {
+        "bottom": "imstuff:block/xray_cheese",
+        "top": "imstuff:block/xray_cheese",
+        "side": "imstuff:block/xray_cheese"
+    }
+}

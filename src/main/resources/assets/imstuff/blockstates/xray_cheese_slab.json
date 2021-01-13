@@ -1,0 +1,13 @@
+{
+    "variants": {
+      "type=bottom": {
+        "model": "imstuff:block/xray_cheese_slab"
+      },
+      "type=double": {
+        "model": "imstuff:block/cheese_block"
+      },
+      "type=top": {
+        "model": "imstuff:block/xray_cheese_slab_top"
+      }
+    }
+  }
