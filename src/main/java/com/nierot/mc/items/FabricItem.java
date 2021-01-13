@@ -1,5 +1,7 @@
 package com.nierot.mc.items;
 
+import com.nierot.mc.ImStuff;
+
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -14,7 +16,7 @@ public class FabricItem extends Item {
 
     public FabricItem() {
         super(new FabricItemSettings()
-            .group(ItemGroup.MISC)
+            .group(ImStuff.ITEM_GROUP)
         );
     };
 
