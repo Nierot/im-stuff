@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "imstuff:block/fabric_block",
+        "top": "imstuff:block/fabric_block",
+        "side": "imstuff:block/fabric_block"
+    }
+}

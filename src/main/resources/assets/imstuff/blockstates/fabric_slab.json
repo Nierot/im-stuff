@@ -1,0 +1,13 @@
+{
+    "variants": {
+      "type=bottom": {
+        "model": "imstuff:block/fabric_slab"
+      },
+      "type=double": {
+        "model": "imstuff:block/fabric_block"
+      },
+      "type=top": {
+        "model": "imstuff:block/fabric_slab_top"
+      }
+    }
+  }

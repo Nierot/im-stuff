@@ -9,35 +9,35 @@ import net.minecraft.block.Material;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.text.LiteralText;
+import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class FabricBlock extends BaseBlock {
+public class FabricSlab extends BaseSlab {
 
-    public FabricBlock() {
+    public static final DirectionProperty SLAB_DIR = DirectionProperty.of("type");
+
+    public FabricSlab() {
         super(
-            FabricBlockSettings
-                .of(Material.WOOL)
-                .breakByHand(true)
-                .breakByTool(FabricToolTags.SHEARS)
-                .sounds(BlockSoundGroup.WOOL)
-                .strength(0.5f, 0.2f),
-            new Item
-                .Settings()
-                .group(ImStuff.ITEM_GROUP)
+        FabricBlockSettings
+            .of(Material.WOOL)
+            .breakByHand(true)
+            .breakByTool(FabricToolTags.SHEARS)
+            .sounds(BlockSoundGroup.WOOL)
+            .strength(0.5f, 0.2f),
+        new Item
+            .Settings()
+            .group(ImStuff.ITEM_GROUP)
         );
+        this.setDefaultState(this.stateManager.getDefaultState());
     }
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (!world.isClient) {
-            player.sendMessage(new LiteralText("oof"), false);
-        }
-
         return ActionResult.PASS;
     }
+
 }
