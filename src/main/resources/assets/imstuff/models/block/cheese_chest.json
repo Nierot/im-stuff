@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "down": "imstuff:block/xray_cheese",
+        "up": "imstuff:block/cheese_chest_top",
+        "east": "imstuff:block/xray_cheese",
+        "west": "imstuff:block/xray_cheese",
+        "north": "imstuff:block/cheese_chest_front",
+        "south": "imstuff:block/xray_cheese",
+        "particle": "imstuff:block/xray_cheese"
+    }
+}

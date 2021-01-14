@@ -25,7 +25,7 @@ public class XrayCheeseSlab extends BaseSlab {
     public XrayCheeseSlab() {
         super(
         FabricBlockSettings
-            .of(Material.WOOL)
+            .of(Material.BUBBLE_COLUMN)
             .breakByHand(true)
             .breakByTool(FabricToolTags.SHEARS)
             .sounds(BlockSoundGroup.WOOL)

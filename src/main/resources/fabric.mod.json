@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "imstuff",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "name": "I'm Stuff!",
   "description": "Epic new items for an epic game",
   "authors": [
@@ -19,7 +19,9 @@
     "main": [
       "com.nierot.mc.ImStuff"
     ],
-    "client": [],
+    "client": [
+      "com.nierot.mc.ImStuffClient"
+    ],
     "server": []
   },
   "mixins": [],

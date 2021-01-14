@@ -1,12 +1,13 @@
 {
     "item.imstuff.fabric_item": "Fabric",
+    "item.imstuff.fabric_item.tooltip": "FabricMC has a really nice tutorial on their website.",
     "block.imstuff.fabric_block": "Fabric Block",
     "block.imstuff.fabric_slab": "Fabric Slab",
     "block.imstuff.xray_cheese_slab": "Xray Cheese Slab",
-    "item.imstuff.xray_cheese_slab.tooltip": {
-        "text": "Place two of these on top of each other for xray!",
-        "color": "yellow"
-    },
+    "item.imstuff.xray_cheese_slab.tooltip": "Place two of these on top of each other for xray!",
     "block.imstuff.cheese_block": "Cheese Block",
-    "itemGroup.imstuff.general": "I'm Stuff!"
+    "itemGroup.imstuff.general": "I'm Stuff!",
+    "block.imstuff.cheese_chest": "Cheese Chest",
+    "block.imstuff.stuffium_ore": "Stuffium Ore",
+    "block.imstuff.sutffium_ore.tooltip": "I have no clue what it's made of, only that it is very shiny."
 }
