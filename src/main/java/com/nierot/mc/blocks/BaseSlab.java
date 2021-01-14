@@ -4,7 +4,7 @@ import net.minecraft.block.SlabBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 
-public class BaseSlab extends SlabBlock {
+public abstract class BaseSlab extends SlabBlock {
 
     private BlockItem blockItem;
 

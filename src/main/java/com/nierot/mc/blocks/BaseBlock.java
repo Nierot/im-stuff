@@ -4,7 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 
-public class BaseBlock extends Block {
+public abstract class BaseBlock extends Block {
 
     private BlockItem blockItem;
 
