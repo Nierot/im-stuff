@@ -7,6 +7,9 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -25,6 +28,8 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 
+import com.nierot.mc.armor.ArmorMaterialStuffium;
+import com.nierot.mc.armor.BaseArmor;
 import com.nierot.mc.blocks.BaseBlock;
 import com.nierot.mc.blocks.BaseSlab;
 import com.nierot.mc.blocks.CheeseBlock;
@@ -43,7 +48,7 @@ import com.nierot.mc.entities.CheeseChestEntity;
 import com.nierot.mc.gui.CheeseChestScreenHandler;
 import com.nierot.mc.items.FabricItem;
 import com.nierot.mc.items.StuffiumIngot;
-import com.nierot.mc.items.ToolMaterialStuffium;
+import com.nierot.mc.tools.ToolMaterialStuffium;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -83,6 +88,20 @@ public class ImStuff implements ModInitializer {
         STUFFIUM_AXE = Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stuffium_axe"), new AxeBase(new ToolMaterialStuffium()));
         STUFFIUM_SHOVEL = Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stuffium_shovel"), new ShovelBase(new ToolMaterialStuffium()));
         STUFFIUM_SWORD = Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stuffium_sword"), new SwordBase(new ToolMaterialStuffium()));
+    }
+
+    // Armor
+    public static ArmorItem STUFFIUM_HELMET;
+    public static ArmorItem STUFFIUM_CHESTPLATE;
+    public static ArmorItem STUFFIUM_LEGGINGS;
+    public static ArmorItem STUFFIUM_BOOTS;
+    private static ArmorMaterial STUFFIUM_ARMOR_MATERIAL = new ArmorMaterialStuffium();
+
+    private static void registerArmor() {
+        STUFFIUM_HELMET = Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stuffium_helmet"), new BaseArmor(STUFFIUM_ARMOR_MATERIAL, EquipmentSlot.HEAD));
+        STUFFIUM_CHESTPLATE = Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stuffium_chestplate"), new BaseArmor(STUFFIUM_ARMOR_MATERIAL, EquipmentSlot.CHEST));
+        STUFFIUM_LEGGINGS = Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stuffium_leggings"), new BaseArmor(STUFFIUM_ARMOR_MATERIAL, EquipmentSlot.LEGS));
+        STUFFIUM_BOOTS = Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stuffium_boots"), new BaseArmor(STUFFIUM_ARMOR_MATERIAL, EquipmentSlot.FEET));
     }
 
     // Chests
@@ -143,6 +162,7 @@ public class ImStuff implements ModInitializer {
         this.registerItems();
         registerBlocks();
         registerTools();
+        registerArmor();
     }
 
     public static void log(Level level, String message){

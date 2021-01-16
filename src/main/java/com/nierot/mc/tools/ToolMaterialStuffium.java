@@ -1,4 +1,4 @@
-package com.nierot.mc.items;
+package com.nierot.mc.tools;
 
 import com.nierot.mc.ImStuff;
 
