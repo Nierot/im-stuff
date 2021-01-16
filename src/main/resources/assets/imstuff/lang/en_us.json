@@ -9,5 +9,7 @@
     "itemGroup.imstuff.general": "I'm Stuff!",
     "block.imstuff.cheese_chest": "Cheese Chest",
     "block.imstuff.stuffium_ore": "Stuffium Ore",
-    "block.imstuff.sutffium_ore.tooltip": "I have no clue what it's made of, only that it is very shiny."
+    "item.imstuff.stuffium_ore.tooltip": "I have no clue what it's made of, only that it is very shiny.",
+    "item.imstuff.stuffium_ingot": "Stuffium Ingot",
+    "item.imstuff.stuffium_ingot.tooltip": "Ooh, Shiny!"
 }
