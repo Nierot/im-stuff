@@ -11,5 +11,10 @@
     "block.imstuff.stuffium_ore": "Stuffium Ore",
     "item.imstuff.stuffium_ore.tooltip": "I have no clue what it's made of, only that it is very shiny.",
     "item.imstuff.stuffium_ingot": "Stuffium Ingot",
-    "item.imstuff.stuffium_ingot.tooltip": "Ooh, Shiny!"
+    "item.imstuff.stuffium_ingot.tooltip": "Ooh, Shiny!",
+    "item.imstuff.stuffium_pickaxe": "Stuffium Pickaxe",
+    "item.imstuff.stuffium_sword": "Stuffium Sword",
+    "item.imstuff.stuffium_shovel": "Stuffium Shovel",
+    "item.imstuff.stuffium_hoe": "Stuffium Hoe",
+    "item.imstuff.stuffium_axe": "Stuffium Axe"
 }

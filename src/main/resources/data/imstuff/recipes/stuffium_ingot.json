@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "imstuff:stuffium_ore"
+    },
+    "result": "imstuff:stuffium_ingot",
+    "experience": 20,
+    "cookingtime": 200,
+    "group": "imstuff"
+}

@@ -8,8 +8,10 @@ import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ToolItem;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -30,12 +32,18 @@ import com.nierot.mc.blocks.FabricBlock;
 import com.nierot.mc.blocks.FabricSlab;
 import com.nierot.mc.blocks.XrayCheeseSlab;
 import com.nierot.mc.ores.StuffiumOre;
+import com.nierot.mc.tools.AxeBase;
+import com.nierot.mc.tools.HoeBase;
+import com.nierot.mc.tools.PickaxeBase;
+import com.nierot.mc.tools.ShovelBase;
+import com.nierot.mc.tools.SwordBase;
 import com.nierot.mc.blocks.BaseBlockWithEntity;
 import com.nierot.mc.blocks.CheeseChest;
 import com.nierot.mc.entities.CheeseChestEntity;
 import com.nierot.mc.gui.CheeseChestScreenHandler;
 import com.nierot.mc.items.FabricItem;
 import com.nierot.mc.items.StuffiumIngot;
+import com.nierot.mc.items.ToolMaterialStuffium;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -54,9 +62,27 @@ public class ImStuff implements ModInitializer {
 		() -> new ItemStack(Blocks.BARREL));
 
     // Items
+    public static Item FABRIC_ITEM;
+    public static Item STUFFIUM_INGOT;
+
     private void registerItems() {
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fabric_item"), new FabricItem());
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stuffium_ingot"), new StuffiumIngot());
+        FABRIC_ITEM = Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fabric_item"), new FabricItem());
+        STUFFIUM_INGOT = Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stuffium_ingot"), new StuffiumIngot());
+    }
+    
+    // Tools
+    public static ToolItem STUFFIUM_PICKAXE;
+    public static ToolItem STUFFIUM_HOE;
+    public static ToolItem STUFFIUM_SWORD;
+    public static ToolItem STUFFIUM_AXE;
+    public static ToolItem STUFFIUM_SHOVEL;
+
+    private static void registerTools() {
+        STUFFIUM_PICKAXE = Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stuffium_pickaxe"), new PickaxeBase(new ToolMaterialStuffium()));
+        STUFFIUM_HOE = Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stuffium_hoe"), new HoeBase(new ToolMaterialStuffium()));
+        STUFFIUM_AXE = Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stuffium_axe"), new AxeBase(new ToolMaterialStuffium()));
+        STUFFIUM_SHOVEL = Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stuffium_shovel"), new ShovelBase(new ToolMaterialStuffium()));
+        STUFFIUM_SWORD = Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stuffium_sword"), new SwordBase(new ToolMaterialStuffium()));
     }
 
     // Chests
@@ -116,7 +142,7 @@ public class ImStuff implements ModInitializer {
         log(Level.INFO, "looks like someone made the poor choice of allowing me into their game xd");
         this.registerItems();
         registerBlocks();
-
+        registerTools();
     }
 
     public static void log(Level level, String message){

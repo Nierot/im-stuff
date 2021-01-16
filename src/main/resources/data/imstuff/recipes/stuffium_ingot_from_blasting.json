@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "imstuff:stuffium_ore"
+    },
+    "result": "imstuff:stuffium_ingot",
+    "experience": 50,
+    "cookingtime": 100,
+    "group": "imstuff"
+  }
