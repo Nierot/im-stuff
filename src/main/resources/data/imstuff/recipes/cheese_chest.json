@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "# #",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "imstuff:cheese_block"
+        }
+    },
+    "result": {
+        "item": "imstuff:cheese_chest",
+        "count": 1
+    },
+    "group": "imstuff"
+}

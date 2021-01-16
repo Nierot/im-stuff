@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " i ",
+        " / ",
+        " / "
+    ],
+    "key": {
+        "i": {
+            "item": "imstuff:stuffium_ingot"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "imstuff:stuffium_shovel",
+        "count": 1
+    }
+}

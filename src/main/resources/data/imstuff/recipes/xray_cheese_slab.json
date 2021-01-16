@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "imstuff:cheese_block"
+        }
+    },
+    "result": {
+        "item": "imstuff:xray_cheese_slab",
+        "count": 6
+    }
+}
