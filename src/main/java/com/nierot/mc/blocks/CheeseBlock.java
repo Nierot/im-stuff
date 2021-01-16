@@ -13,9 +13,9 @@ public class CheeseBlock extends BaseBlock {
     public CheeseBlock() {
         super(
             FabricBlockSettings
-                .of(Material.WOOL)
+                .of(Material.CAKE)
                 .breakByHand(true)
-                .breakByTool(FabricToolTags.SHEARS)
+                .breakByTool(FabricToolTags.AXES)
                 .sounds(BlockSoundGroup.WOOL)
                 .strength(0.2f, 0.2f),
             new Item
